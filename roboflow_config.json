@@ -1,0 +1,9 @@
+{
+    "__comment1": "Obtain these values via Roboflow",
+    "ROBOFLOW_API_KEY": "SVRg2aWesxdOAIjKzlT5",
+    "ROBOFLOW_MODEL": "license-plate-recognition-rxg4e/3",
+    "ROBOFLOW_SIZE": 640,
+    "__comment2": "The following are only needed for infer-async.py",
+    "FRAMERATE": 24,
+    "BUFFER": 0.5
+}
