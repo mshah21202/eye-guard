@@ -1,0 +1,4 @@
+numpy==1.24.3
+easyocr==1.7.0
+google-cloud-vision==3.7.2
+pillow==9.5.0
