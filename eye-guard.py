@@ -78,7 +78,7 @@ async def main(area_id: int, entry: bool, base_url: str, token: str):
     create_thread(vision_loop)
     create_thread(ecampusguard_loop, start_api(lock, queue, area_id, entry, base_url, token))
     # start_api(lock, queue, area_id, entry, base_url, token)
-    start_infer(vision_loop, lock, queue)
+    start_infer(vision_loop, lock, queue, area_id, entry)
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()

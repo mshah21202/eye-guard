@@ -1,4 +1,3 @@
-from asyncio import AbstractEventLoop
 import asyncio
 from threading import Lock
 import requests
@@ -39,6 +38,18 @@ def post_anpr_result(plate: str, area_id: int, entry: bool, base_url: str, token
     )
 
     return result.content
+
+def register_camera_url(area_id: int, entry: bool, base_url: str, token: str):
+    result = requests.post(
+        url=f"{base_url}/Area/details/anplr/stream/{area_id}?url={base_url}&entry={entry}",
+        auth=BearerAuth(token=token),
+        verify="/Users/mohamadshahin/Downloads/Certificate.pem",
+        cert="/Users/mohamadshahin/Downloads/Certificate.pem",
+    )
+
+    return result.content
+
+
 
 async def start_api(lock: Lock, queue, area_id: int, entry: bool, base_url: str, token: str):
     await api_loop(lock, queue, area_id, entry, base_url, token)
