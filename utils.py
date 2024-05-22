@@ -116,13 +116,6 @@ async def detect_text(path):
 
     for text in texts:
         texts_list.append(text.description)
-        # print(f'\n"{text.description}"')
-
-        # vertices = [
-        #     f"({vertex.x},{vertex.y})" for vertex in text.bounding_poly.vertices
-        # ]
-
-        # print("bounds: {}".format(",".join(vertices)))
     print(texts_list)
     if response.error.message:
         raise Exception(
